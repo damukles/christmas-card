@@ -1,0 +1,110 @@
+:root {
+    --christmas-red: #d42426;
+    --christmas-green: #165b33;
+    --snow-white: #f8f8ff;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    /* height:100% */
+    background: radial-gradient(circle at center, var(--christmas-red) 0%, #8b0000 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Mountains of Christmas', cursive;
+    overflow: auto;
+    position: relative;
+}
+
+/* Snow */
+#snow {
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+.snowflake {
+    position: absolute;
+    color: var(--snow-white);
+    font-size: 1.5em;
+    animation: fall linear forwards;
+}
+
+@keyframes fall {
+    to {
+        transform: translateY(100vh);
+    }
+}
+
+/* Sujet */
+.card-container {
+    text-align: center;
+    padding: 2rem;
+    perspective: 1000px;
+}
+
+.santa-container {
+    width: 400px;
+    height: 300px;
+    margin: 0 auto 2rem;
+    position: relative;
+    transition: transform 0.3s ease;
+}
+
+.santa-image {
+    width: 100%;
+    object-fit: contain;
+    animation: wave 2s infinite;
+    filter: drop-shadow(2px 4px 6px rgba(79, 1, 1, 0.985));
+    border-radius: 100%;
+}
+
+h1 {
+    font-size: 4rem;
+    color: var(--snow-white);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    margin: 0;
+    animation: glow 2s ease-in-out infinite alternate;
+}
+
+.interactive:hover {
+    cursor: pointer;
+    transform: scale(1.05);
+}
+.interactive.active {
+    --degrees: 5deg;
+    transform: scale(1.1) rotate(var(--degrees));
+}
+
+/* Animations */
+@keyframes glow {
+    from {
+        text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px var(--christmas-green);
+    }
+    to {
+        text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px var(--christmas-green);
+    }
+}
+
+/* Responsive design */
+@media (max-width: 600px) {
+    .santa-container {
+        width: 200px;
+        height: 200px;
+    }
+
+    h1 {
+        font-size: 3rem;
+    }
+}
+@media (max-width: 1000px) {
+    .santa-container {
+        width: 300px;
+        height: 200px;
+    }
+
+    h1 {
+        font-size: 3rem;
+    }
+}
