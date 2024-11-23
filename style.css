@@ -60,7 +60,7 @@ body::before {
 
 .santa-container {
     width: 400px;
-    height: 300px;
+    height: 400px;
     margin: 0 auto 2rem;
     position: relative;
     transition: transform 0.3s ease;
@@ -107,7 +107,6 @@ h1 {
         width: 200px;
         height: 200px;
     }
-
     h1 {
         font-size: 3rem;
     }
@@ -115,9 +114,8 @@ h1 {
 @media (max-width: 1000px) {
     .santa-container {
         width: 300px;
-        height: 200px;
+        height: 250px;
     }
-
     h1 {
         font-size: 3rem;
     }
