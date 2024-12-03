@@ -1,13 +1,10 @@
 :root {
-    --christmas-red: #d42426;
-    --christmas-green: #165b33;
     --snow-white: #f8f8ff;
 }
 
 body {
     margin: 0;
     min-height: 100vh;
-    /* background: radial-gradient(circle at center, var(--christmas-red) 0%, #8b0000 100%); */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -27,7 +24,7 @@ body::before {
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.6); /* Semi-transparent overlay */
+    background: rgba(0, 0, 0, 0.6);
     z-index: 0;
 }
 
